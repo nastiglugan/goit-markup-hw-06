@@ -666,3 +666,7 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
+
+.modal-submit-btn {
+  padding: 10px 55px;
+}
