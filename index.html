@@ -655,34 +655,36 @@
             <use href="./images/icons/icon.svg#close-icon"></use>
           </svg>
         </button>
+
         <b class="modal-text">Оставьте свои данные, мы вам перезвоним</b>
+
         <form class="modal-form">
-          <div class="form-wrapper">
-            <label for="" class="modal-label">
-              Имя
-              <input type="text" name="name" />
-            </label>
+          <div class="form-group">
+            <label for="name" class="form-label"> Имя </label>
+            <input type="text" name="name" id="name" class="form-input" />
           </div>
 
-          <div class="form-wrapper">
-            <label for="" class="modal-label">
-              Телефон
-              <input type="tel" name="phone" />
-            </label>
+          <div class="form-group">
+            <label for="phone" class="form-label"> Телефон </label>
+            <input type="tel" name="phone" id="phone" class="form-input" />
           </div>
 
-          <div class="form-wrapper">
-            <label for="" class="modal-label">
-              Почта
-              <input type="emal" name="email" />
-            </label>
+          <div class="form-group">
+            <label for="email" class="form-label"> Почта </label>
+            <input type="emal" name="email" id="email" class="form-input" />
           </div>
 
-          <div class="form-wrapper">
-            <label for="" class="modal-label">
-              Комментарий
-              <input type="text" name="comment" placeholder="Введите текст" />
-            </label>
+          <div class="form-group">
+            <label for="comment" class="form-label"> Комментарий </label>
+            <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" name="policy" id="policy" />
+            <label for="policy" class="checkbox-label"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="" class="form-link">Условия договора</a></label
+            >
           </div>
 
           <button class="btn modal-submit-btn" type="submit">Отправить</button>
