@@ -134,6 +134,20 @@ body {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
+.btn {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  line-height: 1.87;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /*MANE PAGE*/
 
 /* Header */
@@ -230,19 +244,9 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
 .intro-btn {
   padding: 10px 32px;
-  font-family: var(--main-font);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.06em;
-  line-height: 1.87;
-  background: var(--color-blue);
-  color: var(--color-white);
-  border: transparent;
-  border-radius: 4px;
-  cursor: pointer;
   transition: color var(--transition-basic);
 }
 
@@ -456,7 +460,7 @@ body {
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
-.footer-social-title {
+.footer-title {
   text-transform: uppercase;
   line-height: calc(16 / 14);
   margin-bottom: 20px;
@@ -466,6 +470,36 @@ body {
 .footer-social-link {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-white);
+}
+.subscribe-form {
+  display: flex;
+  gap: 12px;
+}
+
+.subscribe-form input {
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.subscribe-form input::placeholder {
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: (20/16);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subscribe-icon {
+  fill: currentColor;
 }
 
 /*PORTFOLIO PAGE*/
