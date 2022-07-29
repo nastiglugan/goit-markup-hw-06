@@ -65,7 +65,7 @@
       <section class="intro overlay">
         <div class="container">
           <h1 class="intro-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="btn intro-btn" data-modal-open>Заказать услугу</button>
+          <button type="button" class="btn" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -635,8 +635,8 @@
         <div class="footer-subscribe">
           <h3 class="footer-title">Подпишитесь на рассылку</h3>
           <form class="subscribe-form">
-            <input type="email" name="email" placeholder="E-mail" />
-            <button type="submit" class="btn subscribe-btn">
+            <input class="subscribe-input" type="email" name="email" placeholder="E-mail" />
+            <button type="submit" class="btn">
               Подписаться
               <svg width="24" height="24" class="subscribe-icon">
                 <use href="./images/icons/icon.svg#send"></use>
@@ -658,35 +658,42 @@
 
         <form class="modal-form">
           <strong class="modal-slogan">Оставьте свои данные, мы вам перезвоним</strong>
+          <div class="form-content">
+            <label class="form-group">
+              <span class="form-label">Имя</span>
+              <span class="form-wrap">
+                <input type="text" name="name" class="form-input" />
+                <svg width="18" height="18" class="model-icon">
+                  <use href="./images/icons/icon.svg#person-modal"></use>
+                </svg>
+              </span>
+            </label>
 
-          <label class="form-group">
-            <span class="form-label">Имя</span>
-            <input type="text" name="name" class="form-input" />
-            <svg width="18" height="18" class="model-icon">
-              <use href="./images/icons/icon.svg#person-modal"></use>
-            </svg>
-          </label>
+            <label class="form-group">
+              <span class="form-label">Телефон</span>
+              <span class="form-wrap">
+                <input type="tel" name="phone" class="form-input" />
+                <svg width="18" height="18" class="model-icon">
+                  <use href="./images/icons/icon.svg#phone-modal"></use>
+                </svg>
+              </span>
+            </label>
 
-          <label class="form-group">
-            <span class="form-label">Телефон</span>
-            <input type="tel" name="phone" class="form-input" />
-            <svg width="18" height="18" class="model-icon">
-              <use href="./images/icons/icon.svg#phone-modal"></use>
-            </svg>
-          </label>
+            <label class="form-group">
+              <span class="form-label">Почта</span>
+              <span class="form-wrap">
+                <input type="email" name="email" class="form-input" />
+                <svg width="18" height="18" class="model-icon">
+                  <use href="./images/icons/icon.svg#email-modal"></use>
+                </svg>
+              </span>
+            </label>
 
-          <label class="form-group">
-            <span class="form-label">Почта</span>
-            <input type="email" name="email" class="form-input" />
-            <svg width="18" height="18" class="model-icon">
-              <use href="./images/icons/icon.svg#email-modal"></use>
-            </svg>
-          </label>
-
-          <label class="form-group">
-            <span class="form-label">Комментарий</span>
-            <textarea name="comment" placeholder="Введите текст"></textarea>
-          </label>
+            <label class="form-group">
+              <span class="form-label">Комментарий</span>
+              <textarea class="form-textarea" name="comment" placeholder="Введите текст"></textarea>
+            </label>
+          </div>
 
           <label class="form-checkbox">
             <input type="checkbox" name="policy" class="checkbox-input visually-hidden" />
@@ -697,7 +704,7 @@
             </span>
           </label>
 
-          <button class="btn modal-submit-btn" type="submit">Отправить</button>
+          <button class="btn" type="submit">Отправить</button>
         </form>
       </div>
     </div>
