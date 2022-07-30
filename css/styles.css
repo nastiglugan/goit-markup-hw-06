@@ -482,6 +482,7 @@ body {
 }
 
 .subscribe-input {
+  padding: 16px;
   width: 358px;
   color: var(--color-white);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -490,7 +491,6 @@ body {
 }
 
 .subscribe-input::placeholder {
-  padding-left: 16px;
   font-size: 16px;
   line-height: calc(20 / 16);
   color: rgba(255, 255, 255, 0.6);
@@ -693,8 +693,10 @@ body {
   margin-bottom: 20px;
 }
 
-.form-group:focus-within > .model-icon {
-  fill: var(--color-blue);
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .form-wrap {
@@ -702,8 +704,6 @@ body {
 }
 
 .form-label {
-  margin-bottom: 4px;
-
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
@@ -719,15 +719,12 @@ body {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border var(--transition-basic);
 }
 
 .form-input {
   height: 40px;
   padding: 11px 12px 11px 42px;
-}
-
-.form-input:focus {
-  border-color: var(--color-blue);
 }
 
 .form-textarea {
@@ -744,6 +741,13 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.form-input:hover,
+.form-input:focus,
+.form-textarea:hover,
+.form-textarea:focus {
+  border: 1px solid var(--color-blue);
+}
+
 .model-icon {
   position: absolute;
   top: 50%;
@@ -751,6 +755,11 @@ body {
 
   transform: translateY(-50%);
   transition: fill var(--color-blue);
+}
+
+.form-input:hover + .model-icon,
+.form-input:focus + .model-icon {
+  fill: var(--color-blue);
 }
 
 .form-checkbox {
@@ -773,8 +782,8 @@ body {
     background-image var(--transition-basic), background-size var(--transition-basic),
     background-origin var(--transition-basic);
 }
-.checkbox-icon:hover,
-.checkbox-icon:focus {
+.checkbox-input:hover + .checkbox-icon,
+.checkbox-icon:focus + .checkbox-icon {
   border-color: var(--color-blue);
 }
 
